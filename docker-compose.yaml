@@ -1,0 +1,13 @@
+services:
+  go:
+    command: tail -f /dev/null
+    environment:
+    - GOPATH=/go
+    image: golang:1.17
+    ports:
+    - 9000:9000
+    - 9001:9001
+    volumes:
+    - /root/gops/:/go
+    working_dir: /go
+version: '3'
